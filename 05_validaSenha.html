@@ -5,12 +5,16 @@
     Faça um programa que receba uma senha formada de quatro números inteiros, verifique se a senha está correta e, caso não esteja, solicite novamente a senha. Se a senha entrada for a correta, deverá ser apresentada a mensagem “Senha Correta”, caso contrário, “Senha Incorreta”.
     */
 
-    //Entrada
 
+    let senha = prompt("Insira sua senha");
+    let confirmsenha = prompt("Insira novamente a sua senha para confirmar");
 
-    //Processamento
+    while (senha != confirmsenha) {
+        alert(`Senha incorreta`)
+        senha = prompt("Insira sua senha")
+        confirmsenha = prompt("Insira novamente a sua senha para confirmar")
+    }
 
-
-    //Saída
+    alert(`Dados válidos! Sua senha é: ${confirmsenha}`)
 
 </script>

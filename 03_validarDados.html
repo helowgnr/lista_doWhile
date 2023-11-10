@@ -10,12 +10,36 @@
     Estado Civil: 's', 'c', 'v', 'd';
     */
 
-    //Entrada
+    let nome = prompt("Insira seu nome")
+    let idade = Number(prompt("Indique sua idade"))
+    let salario = Number(prompt("Informe seu salario"))
+    let sexo = prompt("Informe seu sexo: f-feminino ou m-masculino)")
+    let civil = prompt("Informe seu estado civil (s-solteiro, c-casado, v-viúvo ou d-divorciado )")
+
+    while (nome.length <= 3) {
+        nome = prompt("Informe um nome com no mínimo 3 caracteres")
+    }
+    while (idade = 1 && idade >= 150) {
+        idade = prompt("Informe uma idade entre 0 a 150");
+    }
+    while (salario <= 0) {
+        salario = prompt("Informe um valor maior ou igual a 0");
+    }
+    while (sexo != "f" && sexo != "m") {
+        sexo = prompt("Informe seu sexo: f-feminino ou m-masculino)")
+    }
 
 
-    //Processamento
+    while (civil != "s" && civil != "c" && civil != "v" && civil != "d") {
 
+        civil = prompt("Informe seu estado civil (s-solteiro, c-casado, v-viúvo ou d-divorciado.)")
+    }
 
-    //Saída
+    alert(`Seus dados são:\n
+Nome ${nome}\n
+Idade ${idade}\n
+Salário ${salario}\n
+Sexo ${sexo}\n
+Seu estado civil ${civil}`)
 
 </script>

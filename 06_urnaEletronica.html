@@ -19,14 +19,47 @@
     d) O candidato vencedor.
     */
 
-    //Entrada
+    let J = 0
+    let M = 0
+    let N = 0
+    let B = 0
+    let contador = 0
+    const quantidade = parseInt(prompt(`quantas pessoas votaram?`))
 
+    while (contador < quantidade) {
 
-    //Processamento
+        const votos = parseInt(prompt(`Vote: 1-Joãozinho 2-Mariazinha 3-Nulo 4-Branco`))
+        contador++
 
+        if (votos !== 1 && votos !== 2 && votos !== 3 && votos !== 4) {
+            alert(`INFORME O VALOR CERTO`)
+            contador--
+        }
 
-    //Saída
+        if (votos === 1) {
+            J++
+        }
+        else if (votos === 2) {
+            M++
+        }
+        else if (votos === 3) {
+            N++
+        }
+        else {
+            B++
+        }
+    }
+
+    if (J > M) {
+        alert(`O Vencedor foi: Joãozinho com ${J} votos \nMariazinha recebeu ${M} votos \nos votos nulos deram: ${(N / quantidade) * 100}% \ne os votos em branco deram: ${(B / quantidade) * 100}%`)
+    }
+    else if (M > J) {
+        alert(`O Vencedor foi: Mariazinha com ${M} votos \n joãozinho recebeu ${J} votos \nos votos nulos deram: ${(N / quantidade) * 100}% \ne os votos em branco deram: ${(B / quantidade) * 100}%`)
+
+    }
+    else {
+        alert(`Empate: Mariazinha com ${M} votos \n joãozinho recebeu ${J} votos \nos votos nulos deram: ${(N / quantidade) * 100}% \ne os votos em branco deram: ${(B / quantidade) * 100}%`)
+
+    }
 
 </script>
-
-
